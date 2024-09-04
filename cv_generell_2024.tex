@@ -1,5 +1,6 @@
 %%
-%% Time-stamp: <2024-09-02 18:45:15 stefan>
+%% Time-stamp: <2024-09-04 13:08:13 stefan>
+%% Time-stamp: <2024-09-02 14:54:28 stefa>
 %%
 %% CV för aktuell användning i ansökan mot olika organisationer
 
@@ -141,40 +142,33 @@
       utan direktförbindelse via Internet med Bentley's licensieringstjänst dvs att nedhämtade nycklar ska
       distribueras inom ett internt nät till användarnas maskiner.
     \end{itemize}
-
+    Detta medförde att jag fick lära mig systemadministration i Windows (använder CFEngine som ramverk.)
+    Tester och prov skrivs i Powershell.
 \end{minipage}
 
 \begin{minipage}[t]{0.73\textwidth}
-  % \begin{descriptioncv}{Egna programmeringsprojekt}
-  %   \cvitem{Automatisering av BIND}{2015--}{Automatiserad konfiguration av ISC:s BIND9:demon.
-  %     Använder existerande JSON:beskrivningar av
-  %     de olika systemen med namn, IP:adresser och vilka tjänster de har för att automatiskt generera DNS:zonbeskrivningar
-  %     med kravet att löpnummer för zonen uppdateras på ett korrekt sätt.)}
-  % \end{descriptioncv}
+  \begin{descriptioncv}{Egna programmeringsprojekt}
+    \cvitem{Automatisering av BIND}{2015--}{Automatiserad konfiguration av ISC:s BIND9:demon.
+      Använder existerande JSON:beskrivningar av
+      de olika systemen med namn, IP:adresser och vilka tjänster de har för att automatiskt generera DNS:zonbeskrivningar
+      med kravet att löpnummer för zonen uppdateras på ett korrekt sätt.)}
+    \cvitem{PKI:funktionalitet}{2014--}{Användning av publika certifikat med en struktur med fyra st
+      certifikatutfärdare där de olika utfärdarna har olika ansvar.
+      Rot-utfärdarens certifikat installeras på de system där det är nödvändigt.
+      Mellannivåns certifikat är signerat av rot-diton medans dess funktion är en delegerad rotutfärdare
+      men med korta löptider för dess eget certifikat.
+      Applikations- och slutanvändare-certifikat hanteras av var sin specialiserad utfärdare.
+      Paketet är skrivet för openssl och dess ''ca'':verktyg.}
+    \cvitem{Automatisering av brandväggsregler}{2015--}{Automatiserad konfiguration av IPtable. Uppgifter om olika tjänster
+      i nätet i JSON för att ange vilka avsändaradresser som är godkända för olika TCP:/UDP:portar. Acceptansför att
+      kontrollera det genererade IPtable-skriptet exv inte blockerar SSH från egna maskiner. Gått igenom
+      reglerna för ICMP för att ange och dokumentera varför viss trafik är nödvändig och OK eller om den är önskvärd.
+      Samma typ av genomgång har gjorts för IPv6:trafik. Har via Hurricane Electric haft en globalt nåbar IPv6-adress
+      i fem år jämfört med IP-onlys använding av Carrier-grade NAT.}
+   \cvitem{IBM:s master the mainframe:program}{2021--}{har gått in i IBM:s master the mainframe:program
+      för att lära mig den miljön (z/OS,COBOL,JCL). Ett resultat av mitt intresse för 1978:s års MVS}
+  \end{descriptioncv}
 
-  %   \cvitem{PKI:funktionalitet}{2014--}{Användning av publika certifikat med en struktur med fyra st
-  %     certifikatutfärdare där de olika utfärdarna har olika ansvar.
-  %     Rot-utfärdarens certifikat installeras på de system där det är nödvändigt.
-  %     Mellannivåns certifikat är signerat av rot-diton medans dess funktion är en delegerad rotutfärdare
-  %     men med korta löptider för dess eget certifikat.
-  %     Applikations- och slutanvändare-certifikat hanteras av var sin specialiserad utfärdare.
-  %     Paketet är skrivet för openssl och dess ''ca'':verktyg.
-  %     Eventuellt skulle man låta en utfärdaremodul lagra uppgifter om signerade certifikat i
-  %     en CFengine datastruktur (container) för att i slutet av körningen lagra dem i en JSON:strukturerade fil för att vid
-  %     nästa evaluering ladda in nuvarande uppgifter igen. Ett registerprogram skrivet i CFEngine:s språk}
-
-  %   \cvitem{Automatisering av brandväggsregler}{2015--}{Automatiserad konfiguration av IPtable. Uppgifter om olika tjänster
-  %     i nätet i JSON för att ange vilka avsändaradresser som är godkända för olika TCP:/UDP:portar. Acceptansför att
-  %     kontrollera det genererade IPtable-skriptet exv inte blockerar SSH från egna maskiner. Gått igenom
-  %     reglerna för ICMP för att ange och dokumentera varför viss trafik är nödvändig och OK eller om den är önskvärd.
-  %     Samma typ av genomgång har gjorts för IPv6:trafik. Har via Hurricane Electric haft en globalt nåbar IPv6-adress
-  %     i fem år jämfört med IP-onlys använding av Carrier-grade NAT.}
-
-  %   \cvitem{IBM:s master the mainframe:program}{2021--}{har gått in i IBM:s master the mainframe:program
-  %     för att lära mig den miljön (z/OS,COBOL,JCL). Ett resultat av mitt intresse för 1978:s års MVS}
-
-
-  % Referenser lämnas på begäran
   \textbf{Utvecklingstekniker}
   \begin{description}[nosep]
     %% \raggedleft\setlength\itemsep{0.1ex}\small%
@@ -188,7 +182,7 @@
   \item Python
   \end{description}
 
-  \textbf{Linux}
+  \textbf{Linux/UNIX}
   \begin{description}[nosep,font=\sffamily\bfseries]
     %% \raggedleft\setlength\itemsep{0.1ex}
     \small%
@@ -205,12 +199,12 @@
   \item MS Word
   \item NetBSD
   \item MVS
-  \item z/OS (deltar i IBM:s programmeringstävling \href{https://ibmzxplore.influitive.com/forum/}{IBM Z Xplore})
+  \item z/OS (deltar i IBM:s programmeringsevent \href{https://ibmzxplore.influitive.com/forum/}{IBM Z Xplore})
   \item \LaTeX
   \end{description}
 \end{minipage}
 \begin{minipage}[t]{0.24\textwidth}
-  \vspace{20cm}
+  \vspace{22cm}
   \textbf{Colophon}
   \begin{description}[nosep,itemsep=0.1ex]
     \setlength\itemsep{0.1ex}\small%
