@@ -27,7 +27,6 @@
 ## Bibliography auxiliary files (bibtex/biblatex/biber):
 *.bbl
 *.bcf
-*.bcf.log
 *.blg
 *-blx.aux
 *-blx.bib
@@ -40,6 +39,8 @@
 *.synctex.gz
 *.synctex.gz(busy)
 *.pdfsync
+*.rubbercache
+rubber.cache
 
 ## Build tool directories for auxiliary files
 # latexrun
@@ -110,12 +111,25 @@ acs-*.bib
 *.glo
 *.gls
 *.glsdefs
+*.lzo
+*.lzs
+*.slg
+*.slo
+*.sls
+
+# uncomment this for glossaries-extra (will ignore makeindex's style files!)
+# *.ist
+
+# gnuplot
+*.gnuplot
+*.table
 
 # gnuplottex
 *-gnuplottex-*
 
 # gregoriotex
 *.gaux
+*.glog
 *.gtex
 
 # htlatex
@@ -126,13 +140,16 @@ acs-*.bib
 *.trc
 *.xref
 
+# hypdoc
+*.hd
+
 # hyperref
 *.brf
 
 # knitr
 *-concordance.tex
-# TODO Comment the next line if you want to keep your tikz graphics files
-*.tikz
+# TODO Uncomment the next line if you use knitr and want to ignore its generated tikz files
+# *.tikz
 *-tikzDictionary
 
 # listings
@@ -162,6 +179,9 @@ _minted*
 # morewrites
 *.mw
 
+# newpax
+*.newpax
+
 # nomencl
 *.nlg
 *.nlo
@@ -180,6 +200,9 @@ _minted*
 
 # scrwfile
 *.wrt
+
+# svg
+svg-inkscape/
 
 # sympy
 *.sout
@@ -205,6 +228,9 @@ pythontex-files-*/
 *.md5
 *.auxlock
 
+# titletoc
+*.ptc
+
 # todonotes
 *.tdo
 
@@ -224,8 +250,9 @@ pythontex-files-*/
 # xindy
 *.xdy
 
-# xypic precompiled matrices
+# xypic precompiled matrices and outlines
 *.xyc
+*.xyd
 
 # endfloat
 *.ttt
@@ -251,6 +278,15 @@ TSWLatexianTemp*
 # KBibTeX
 *~[0-9]*
 
+# gummi
+.*.swp
+
+# KBibTeX
+*~[0-9]*
+
+# TeXnicCenter
+*.tps
+
 # auto folder when using emacs and auctex
 ./auto/*
 *.el
@@ -261,17 +297,7 @@ TSWLatexianTemp*
 # standalone packages
 *.sta
 
-texput.log
-
-
-/cf_promises_*
-
 .*.sw[po]
-
-##
-## git revisioner
-##
-*~HEAD~
 
 ##
 ## emacs backup
@@ -283,34 +309,6 @@ texput.log
 ##
 ## låsfil (vi ?)
 .~lock.*
-
-## (x)fig
-use_case*.fig.bak
-directory*.fig.bak
-
-# IT119G
-labbrapport.pdf
-labbrapport_cm.pdf
-
-# IT121G
-Hemtentamen.pdf
-
-# HI1110
-hemtentamen.pdf
-
-##
-## dokumentering av cfengine postgresql schema
-##
-databas_schema.pdf
-databas_schema_med_tikz.pdf
-
-## specifik för pki (x509)
-reporting-standards*.pdf
-pki.pdf
-
-##
-## specifik för x509
-use_case*.pdf
 
 #
 frontmatter.pdf
@@ -324,3 +322,14 @@ minipage.pdf
 cv.html
 cv_minipage_2024.pdf
 cv_generell_2024.pdf
+
+# Makeindex log files
+*.lpz
+
+# xwatermark package
+*.xwm
+
+# REVTeX puts footnotes in the bibliography by default, unless the nofootinbib
+# option is specified. Footnotes are the stored in a file with suffix Notes.bib.
+# Uncomment the next line to have this generated file ignored.
+#*Notes.bib
